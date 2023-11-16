@@ -21,7 +21,7 @@
 //   console.log(froyoOrder1(flavors));
 const userInputString = prompt(
     "Please enter your choice of fro-yo flavors, separated by commas.",
-    "vanilla,vanilla,vanilla,strawberry,coffee,coffee"
+    "vanilla,vanilla,vanilla,strawberry,coffee,coffee,chocolate"
   );
 
 // console.log(userInputString);
@@ -58,6 +58,10 @@ function froyoOrder(flavors) {
             froyo.Strawberry ++; 
         } else if (flavors[key] === "coffee") {
             froyo.Coffee ++;
+        } else if (froyo.Other >= 1) {
+            froyo.Other ++;
+        } else {
+            froyo.Other = 1;
         }
   };
   return froyo;
@@ -72,7 +76,7 @@ console.table(froyo);
 //     } else {
 //         count[key] = 1;
 //     }
-//     console.log(count);
 // }
 
 // console.table(count);
+
